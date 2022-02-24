@@ -1,0 +1,31 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: baseline;
+  padding: 1rem;
+  background-color: var(--dark);
+}
+.navigation h1 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--gray);
+}
+.navigation h1 span {
+  color: var(--yellow);
+}
+.navigation ul {
+  display: flex;
+}
+.navigation ul li {
+  list-style-type: none;
+  font-size: 18px;
+  font-weight: 700;
+  margin-left: 1rem;
+  color: var(--gray);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.navigation ul li:hover {
+  color: var(--yellow);
+}
