@@ -41,3 +41,17 @@
   font-size: 18px;
   font-weight: 400;
 }
+
+@media (max-width: 900px) {
+  .gridContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .about {
+    padding-bottom: 10rem;
+  }
+  .gridContainer .picture {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+}
