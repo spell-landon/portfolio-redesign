@@ -4,6 +4,7 @@ import petfindr from '../../img/PetFindr.png';
 import watson from '../../img/The Watson.png';
 import recipeace from '../../img/Recipeace.png';
 import flashcards from '../../img/Flash Cards.png';
+import { AiFillGithub } from 'react-icons/ai';
 
 function Projects(props) {
   return (
@@ -69,6 +70,16 @@ function Projects(props) {
             <p>you can find additional projects on my github profile</p>
           </section>
         </div>
+      </div>
+      <div className={styles.curved}></div>
+      <div className={styles.githubSection}>
+        <a
+          id='githubLink'
+          href='https://github.com/spell-landon'
+          target='_blank'
+          rel='noopener noreferrer'>
+          <AiFillGithub className={styles.icon} />
+        </a>
       </div>
     </div>
   );
