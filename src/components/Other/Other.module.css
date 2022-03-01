@@ -1,0 +1,88 @@
+.otherContainer {
+  color: var(--blue);
+  background-color: var(--dark);
+  padding: 8rem 1rem;
+  height: fit-content;
+  width: 100%;
+}
+.otherContent {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.otherContent h3 {
+  font-size: 24px;
+}
+.otherContent .bigText {
+  display: block;
+  font-size: 216px;
+  position: absolute;
+  font-weight: 700;
+  color: rgba(233, 234, 236, 0.03);
+  width: max-content;
+  margin-left: -5%;
+  margin-top: -11rem;
+  cursor: default;
+}
+/* Additional Area */
+.additionalLinks {
+  margin-top: 8rem;
+  font-family: 'Playfair Display', serif;
+  color: var(--gray);
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+}
+.additionalIcons {
+  margin-top: 2rem;
+  font-size: 42px;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  transition: all 0.2s ease;
+}
+.additionalIcons a {
+  color: var(--gray);
+  transition: all 0.2s ease;
+}
+.additionalIcons .linkedinIcon,
+.additionalIcons .githubIcon,
+.additionalIcons .spotifyIcon,
+.additionalIcons .youtubeIcon,
+.additionalIcons .applemusicIcon {
+  padding: 0.1rem;
+}
+.additionalIcons .linkedinIcon:hover {
+  color: rgba(44, 99, 187, 100%);
+  background-color: white;
+  border-radius: 5px;
+}
+.additionalIcons .githubIcon:hover {
+  color: rgba(36, 40, 45, 100%);
+  background-color: white;
+  border-radius: 5px;
+}
+.additionalIcons .spotifyIcon:hover {
+  color: #65d46e;
+  background-color: white;
+  border-radius: 5px;
+}
+.additionalIcons .youtubeIcon:hover {
+  color: rgba(233, 51, 34, 100%);
+  background-color: white;
+  border-radius: 5px;
+}
+.additionalIcons .applemusicIcon:hover {
+  color: rgba(230, 76, 86, 100%);
+  background-color: white;
+  border-radius: 5px;
+}
+
+@media (max-width: 900px) {
+  .additionalIcons {
+    width: 100%;
+  }
+}

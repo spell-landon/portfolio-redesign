@@ -1,0 +1,67 @@
+.contactContainer {
+  height: fit-content;
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--gray);
+}
+.contactContent {
+  padding: 5rem 1rem;
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+}
+.contactContainer h3 {
+  color: var(--darkblue);
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 1rem;
+}
+/* Form */
+.contactContainer form {
+  display: flex;
+  flex-direction: column;
+}
+/* Form Input */
+.contactContainer form input,
+.contactContainer form textarea {
+  /* background-color: rgba(196, 196, 196, 0.1); */
+  background-color: transparent;
+  border: 1px solid var(--dark);
+  border-radius: 18px;
+  padding: 0.5rem 1rem;
+  color: var(--dark);
+  margin: 1rem 0;
+  font-size: 18px;
+}
+.contactContainer form textarea {
+  max-width: 100%;
+}
+/* Submit Button */
+.submitBtn {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  background-color: transparent;
+  background: -webkit-linear-gradient(45deg, var(--red), var(--yellow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(90deg, var(--red), var(--yellow));
+  border-width: 3px;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.submitBtn:hover {
+  background: -webkit-linear-gradient(45deg, var(--yellow), var(--red));
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-image-source: linear-gradient(90deg, var(--yellow), var(--red));
+}
+.submitBtn:active {
+  background-color: rgba(196, 196, 196, 0.3);
+}
