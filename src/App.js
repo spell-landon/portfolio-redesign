@@ -6,11 +6,15 @@ import Projects from './components/Projects/Projects';
 import Resume from './components/Resume/Resume';
 import Contact from './components/Contact/Contact';
 import Other from './components/Other/Other';
+// Scroll
+import { Element } from 'react-scroll';
 
 function App() {
   return (
     <>
-      <Navigation />
+      <Element id='navigation' name='navigation'>
+        <Navigation />
+      </Element>
       <Hero />
       <About />
       <Projects />
