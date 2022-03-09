@@ -24,10 +24,8 @@
   margin-left: -5rem;
   margin-top: -11rem;
   cursor: default;
-  width: 100%;
-  max-width: 100vw;
-  -o-text-overflow: clip;
-  text-overflow: clip;
+  max-width: calc(100% + 4rem);
+    overflow-x: hidden;
   white-space: nowrap;
 }
 /* Additional Area */
