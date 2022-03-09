@@ -2,6 +2,8 @@
   color: var(--blue);
   background-color: var(--dark);
   padding: 0 1rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   width: 100%;
   padding-top: 10rem;
@@ -13,11 +15,12 @@
   margin: 0 auto;
 }
 .vector {
-  width: 100vw;
+  width: 100%;
   height: 79px;
   background-image: url(../../img/Vector2.png);
   background-repeat: repeat-x;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .projectsContent h3 {
   font-size: 24px;
@@ -27,10 +30,14 @@
   position: absolute;
   font-weight: 700;
   color: rgba(233, 234, 236, 0.03);
-  width: max-content;
-  margin-left: -25%;
+  margin-left: -5rem;
   margin-top: -15rem;
   cursor: default;
+  width: 100%;
+  max-width: 100vw;
+  -o-text-overflow: clip;
+     text-overflow: clip;
+  white-space: nowrap;
 }
 .projectCards {
   margin-top: 15rem;
@@ -51,26 +58,41 @@
   max-width: 1100px;
 }
 .cardText {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   width: 100%;
   max-width: 1100px;
   margin-top: -135px;
   padding: 2rem;
   height: 130px;
   color: rgba(233, 234, 236, 1);
-  background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 0%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#000000), to(rgba(0, 0, 0, 0)));
+  background: -o-linear-gradient(bottom, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
   border-radius: 0 0 10px 10px;
   visibility: hidden;
   opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
 .projectCards a:hover .cardText {
   visibility: visible;
   opacity: 1;
+  background: -webkit-gradient(linear, left bottom, left top, from(#000000), to(rgba(0, 0, 0, 0)));
+  background: -o-linear-gradient(bottom, #000000 0%, rgba(0, 0, 0, 0) 100%);
   background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
 }
 .cardText h4 {
@@ -95,15 +117,18 @@
   position: relative;
   margin-top: -3rem;
   z-index: 0;
-  clip-path: ellipse(100% 100% at 50% 100%);
+  -webkit-clip-path: ellipse(100% 100% at 50% 100%);
+          clip-path: ellipse(100% 100% at 50% 100%);
   background-color: white;
 }
 /* Github Link */
 .githubSection {
-  width: fit-content;
+  width: 100%;
   margin: 0 auto;
 }
 #githubLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
   border-radius: 5rem;
@@ -117,6 +142,8 @@
   margin-top: -17rem;
   color: var(--yellow);
   border-radius: 5rem;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .icon:hover {
@@ -132,7 +159,6 @@
     visibility: visible;
     opacity: 1;
     padding: 1rem;
-    /* color: black; */
   }
   .projectsContent .bigText {
     font-size: 144px;

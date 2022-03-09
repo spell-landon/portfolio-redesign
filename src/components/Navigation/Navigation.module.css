@@ -1,8 +1,14 @@
 .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
-  align-items: baseline;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   padding: 1rem;
   background-color: var(--dark);
 }
@@ -15,6 +21,8 @@
   color: var(--yellow);
 }
 .navigation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .navigation ul li {
@@ -24,8 +32,17 @@
   margin-left: 1rem;
   color: var(--gray);
   cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .navigation ul li:hover {
   color: var(--yellow);
+}
+
+@media (max-width: 650px) {
+  .navigation ul li {
+    font-size: 14px;
+    margin-left: 0.5rem;
+  } 
 }

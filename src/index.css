@@ -6,12 +6,13 @@
   --gray: #e9eaec;
   --dark: #333652;
   --red: #db1f48;
-  --darkblue: #4F5BD0;
+  --darkblue: #4f5bd0;
 }
 
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }

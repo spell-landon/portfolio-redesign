@@ -1,4 +1,6 @@
 .contactContainer {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   width: 100%;
   margin: 0 auto;
@@ -18,28 +20,36 @@
 }
 /* Form */
 .contactContainer form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 /* Form Input */
 .contactContainer form input,
 .contactContainer form textarea {
-  /* background-color: rgba(196, 196, 196, 0.1); */
   background-color: transparent;
   border: 1px solid var(--dark);
   border-radius: 18px;
   padding: 0.5rem 1rem;
   color: var(--dark);
   margin: 1rem 0;
-  font-size: 18px;
+  font-size: 16px;
 }
 .contactContainer form textarea {
   max-width: 100%;
 }
 /* Submit Button */
 .submitBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 24px;
   font-weight: 700;
   background-color: transparent;
@@ -54,6 +64,8 @@
   width: 100%;
   margin: 1rem 0;
   cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .submitBtn:hover {
