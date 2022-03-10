@@ -10,7 +10,6 @@ function Hero(props) {
           <h2>
             let me help <span>you</span> on your next project
           </h2>
-          <p>spell.landon@gmail.com</p>
         </div>
       </div>
     </div>
