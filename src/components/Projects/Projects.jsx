@@ -6,7 +6,6 @@ import recipeace from '../../img/Recipeace.png';
 import flashcards from '../../img/Flash Cards.png';
 import { AiFillGithub } from 'react-icons/ai';
 import { Element } from 'react-scroll';
-import { Link } from 'react-router-dom';
 
 function Projects(props) {
   return (
