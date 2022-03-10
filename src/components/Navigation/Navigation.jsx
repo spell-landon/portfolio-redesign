@@ -1,14 +1,26 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 import styles from './Navigation.module.css';
+// Framer Motion
+import { motion } from 'framer-motion';
 
 function Navigation(props) {
   return (
-    <div className={styles.navigation}>
-      <h1>
+    <motion.div
+      className={styles.navigation}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ ease: 'easeIn', duration: 0.5, delay: 0.5 }}>
+      <motion.h1
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ ease: 'easeIn', duration: 0.5 }}>
         Landon Spell<span>.</span>
-      </h1>
-      <ul>
+      </motion.h1>
+      <motion.ul
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ ease: 'easeIn', duration: 0.5 }}>
         <li>
           <Link
             activeClass='active'
@@ -53,8 +65,8 @@ function Navigation(props) {
             Contact
           </Link>
         </li>
-      </ul>
-    </div>
+      </motion.ul>
+    </motion.div>
   );
 }
 

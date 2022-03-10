@@ -1,14 +1,25 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './About.module.css';
 import { Element } from 'react-scroll';
+// Framer Motion
+import { motion } from 'framer-motion';
 
 function About(props) {
+  const scrollRef = useRef(null);
   return (
     <Element id='about' name='about'>
       <div className={styles.about}>
         <h3>a bit about me...</h3>
-        <div className={styles.gridContainer}>
-          <div className={styles.picture}></div>
+        <motion.div
+          className={styles.gridContainer}
+          ref={scrollRef}
+          style={{ overflow: 'scroll' }}>
+          <motion.div
+            className={styles.picture}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ amount: 0.5 }}
+            transition={{ ease: 'easeIn', duration: 0.3 }}></motion.div>
           <div>
             <section>
               <h4>Education</h4>
@@ -41,7 +52,7 @@ function About(props) {
               </p>
             </section>
           </div>
-        </div>
+        </motion.div>
       </div>
     </Element>
   );
