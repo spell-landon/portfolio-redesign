@@ -12,15 +12,15 @@ import { Element } from 'react-scroll';
 function App() {
   return (
     <>
-      <Element id='navigation' name='navigation'>
-        <Navigation />
-      </Element>
-      <Hero />
-      <About />
-      <Projects />
-      <Resume />
-      <Contact />
-      <Other />
+        <Element id='navigation' name='navigation'>
+          <Navigation />
+        </Element>
+        <Hero />
+        <About />
+        <Projects />
+        <Resume />
+        <Contact />
+        <Other />
     </>
   );
 }

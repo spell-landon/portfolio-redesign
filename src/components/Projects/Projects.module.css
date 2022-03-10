@@ -49,6 +49,7 @@
   width: 100%;
   max-width: 1100px;
   text-decoration: none;
+
 }
 .projectCards img {
   border-radius: 10px;
@@ -56,54 +57,28 @@
   max-width: 1100px;
 }
 .cardText {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
   align-items: flex-start;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
   width: 100%;
   max-width: 1100px;
-  margin-top: -135px;
-  padding: 2rem;
-  height: 130px;
-  color: rgba(233, 234, 236, 1);
-  background: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    from(#000000),
-    to(rgba(0, 0, 0, 0))
-  );
-  background: -o-linear-gradient(bottom, #000000 0%, rgba(0, 0, 0, 0) 100%);
-  background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  /* margin-top: -135px; */
+  z-index: 100;
+  padding: 1rem;
+  margin-bottom: 0rem;
+  /* height: 130px; */
+  color: var(--gray);
+  /* background-color: white; */
   border-radius: 0 0 10px 10px;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  /* visibility: hidden;
+  opacity: 0; */
+  transition: all 0.3s ease;
 }
 
 .projectCards a:hover .cardText {
   visibility: visible;
   opacity: 1;
-  background: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    from(#000000),
-    to(rgba(0, 0, 0, 0))
-  );
-  background: -o-linear-gradient(bottom, #000000 0%, rgba(0, 0, 0, 0) 100%);
-  background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
 }
 .cardText h4 {
   font-size: 24px;
