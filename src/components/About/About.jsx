@@ -16,8 +16,8 @@ function About(props) {
           style={{ overflow: 'scroll' }}>
           <motion.div
             className={styles.picture}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0, translateY: 20 }}
+            whileInView={{ opacity: 1, translateY: 0 }}
             viewport={{ amount: 0.5 }}
             transition={{ ease: 'easeIn', duration: 0.3 }}></motion.div>
           <div>
