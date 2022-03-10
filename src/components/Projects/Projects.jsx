@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './Projects.module.css';
 import petfindr from '../../img/PetFindr.png';
 import watson from '../../img/The Watson.png';
@@ -6,18 +6,49 @@ import recipeace from '../../img/Recipeace.png';
 import flashcards from '../../img/Flash Cards.png';
 import { AiFillGithub } from 'react-icons/ai';
 import { Element } from 'react-scroll';
+// Framer Motion
+import { motion } from 'framer-motion';
 
 function Projects(props) {
+  const scrollRef = useRef(null);
+  const item = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        ease: 'easeIn',
+        duration: 0.75,
+      },
+    },
+  };
+
   return (
     <Element id='projects' name='projects'>
       <div>
-        <div className={styles.vector}></div>
+        <motion.div
+          animate={{ x: -440 }}
+          transition={{
+            ease: 'easeInOut',
+            duration: 5,
+            repeat: Infinity,
+            repeatType: 'mirror',
+          }}
+          className={styles.vector}></motion.div>
         <div className={styles.projectsContainer}>
           <div className={styles.projectsContent}>
             <h3>things i've built...</h3>
             <p className={styles.bigText}>things i've built...</p>
-            <section className={styles.projectCards}>
-              <div className={styles.card}>
+            <motion.div
+              className={styles.projectCards}
+              ref={scrollRef}
+              style={{ overflow: 'scroll' }}
+            >
+              <motion.div
+                className={styles.card}
+                variants={item}
+                initial='hidden'
+                whileInView='visible'
+                viewport={{ amount: '80%' }}>
                 <a
                   href='https://petfindr.netlify.app/'
                   target='_blank'
@@ -30,8 +61,13 @@ function Projects(props) {
                     </h5>
                   </div>
                 </a>
-              </div>
-              <div className={styles.card}>
+              </motion.div>
+              <motion.div
+                className={styles.card}
+                variants={item}
+                initial='hidden'
+                whileInView='visible'
+                viewport={{ amount: '80%' }}>
                 <a
                   href='https://the-watson.netlify.app/'
                   target='_blank'
@@ -42,8 +78,13 @@ function Projects(props) {
                     <h5>React | Express | MongoDB | Node | CSS</h5>
                   </div>
                 </a>
-              </div>
-              <div className={styles.card}>
+              </motion.div>
+              <motion.div
+                className={styles.card}
+                variants={item}
+                initial='hidden'
+                whileInView='visible'
+                viewport={{ amount: '80%' }}>
                 <a
                   href='https://recipeace.netlify.app/'
                   target='_blank'
@@ -54,8 +95,13 @@ function Projects(props) {
                     <h5>React | Third Party API | CSS</h5>
                   </div>
                 </a>
-              </div>
-              <div className={styles.card}>
+              </motion.div>
+              <motion.div
+                className={styles.card}
+                variants={item}
+                initial='hidden'
+                whileInView='visible'
+                viewport={{ amount: '80%' }}>
                 <a
                   href='https://spell-landon.github.io/flash-cards/'
                   target='_blank'
@@ -66,8 +112,8 @@ function Projects(props) {
                     <h5>JavaScript | HTML | CSS</h5>
                   </div>
                 </a>
-              </div>
-            </section>
+              </motion.div>
+            </motion.div>
             <section className={styles.additional}>
               <p>you can find additional projects on my github profile</p>
             </section>

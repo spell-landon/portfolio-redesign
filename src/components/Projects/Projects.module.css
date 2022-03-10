@@ -15,12 +15,13 @@
   margin: 0 auto;
 }
 .vector {
-  width: 100%;
+  width: 200%;
   height: 79px;
   background-image: url(../../img/Vector2.png);
   background-repeat: repeat-x;
-  -o-object-fit: cover;
-  object-fit: cover;
+  /* overflow-x: hidden; */
+  /* -o-object-fit: cover; */
+  /* object-fit: cover; */
 }
 .projectsContent h3 {
   font-size: 24px;
