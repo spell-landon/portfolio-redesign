@@ -81,14 +81,14 @@
 @media (max-width: 650px) {
   .submitBtn {
     background: transparent;
-    -webkit-text-fill-color: var(--darkblue);
-    border-image-source: var(--darkblue);
-    border: 2px solid var(--darkblue);
+    -webkit-text-fill-color: var(--red);
+    border-image-source: var(--red);
+    border: 2px solid var(--red);
     border-radius: 30px;
     width: 75%;
   }
   .submitBtn:hover {
-    background: var(--darkblue);
+    background: var(--red);
     -webkit-text-fill-color: var(--gray);
     border-image-source: none;
   }

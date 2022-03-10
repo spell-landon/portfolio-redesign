@@ -3,6 +3,7 @@ import styles from './Contact.module.css';
 import emailjs from '@emailjs/browser';
 import { init } from '@emailjs/browser';
 import { Element } from 'react-scroll';
+import { Ellipsis } from 'react-awesome-spinners';
 
 function Contact(props) {
   init('user_6FqX0M9JjoiaBRXBdMm6v');
@@ -10,13 +11,16 @@ function Contact(props) {
   const submitBtn = useRef();
   const [disable, setDisable] = useState(false);
   const [msgSent, setMsgSent] = useState(false);
+  const [sending, setSending] = useState(false);
   useEffect(() => {
+    setSending(false);
     setMsgSent(false);
     setDisable(false);
   }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setSending(true);
     emailjs
       .sendForm(
         'service_ibv2jze',
@@ -26,17 +30,18 @@ function Contact(props) {
       )
       .then(
         (result) => {
+          setSending(false);
           setMsgSent(true);
           setDisable(true);
-          console.log(result.text);
         },
         (error) => {
           setMsgSent(false);
-          console.log(error.text);
+          setSending(false);
         }
       )
       .then(form.current.reset());
   };
+
   return (
     <Element id='contact' name='contact'>
       <div className={styles.contactContainer}>
@@ -82,7 +87,11 @@ function Contact(props) {
               type='submit'
               ref={submitBtn}
               disabled={disable}>
-              <p id='btnText'>{!msgSent ? 'Send Message' : 'Message Sent!'}</p>
+              {sending ? (
+                <Ellipsis color={'var(--darkblue)'} size={64} />
+              ) : (
+                <p id='btnText'>{msgSent ? 'Message Sent' : 'Send Message'}</p>
+              )}
             </button>
           </form>
         </div>
