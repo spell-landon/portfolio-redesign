@@ -41,8 +41,7 @@ function Projects(props) {
             <motion.div
               className={styles.projectCards}
               ref={scrollRef}
-              style={{ overflow: 'scroll' }}
-            >
+              style={{ overflow: 'scroll' }}>
               <motion.div
                 className={styles.card}
                 variants={item}
@@ -121,13 +120,18 @@ function Projects(props) {
         </div>
         <div className={styles.curved}></div>
         <div className={styles.githubSection}>
-          <a
+          <motion.a
             id='githubLink'
             href='https://github.com/spell-landon'
             target='_blank'
-            rel='noopener noreferrer'>
+            rel='noopener noreferrer'
+            initial={{ rotate: '0deg' }}
+            whileInView={{ rotate: '360deg' }}
+            viewport={{ amount: 1 }}
+            transition={{ duration: 0.5 }}
+            >
             <AiFillGithub className={styles.icon} />
-          </a>
+          </motion.a>
         </div>
       </div>
     </Element>

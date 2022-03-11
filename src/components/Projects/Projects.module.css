@@ -50,7 +50,6 @@
   width: 100%;
   max-width: 1100px;
   text-decoration: none;
-
 }
 .projectCards img {
   border-radius: 10px;
@@ -109,8 +108,12 @@
 }
 /* Github Link */
 .githubSection {
-  width: 100%;
+  width: fit-content;
   margin: 0 auto;
+}
+.githubSection a {
+  display: block;
+  /* margin: 0 auto; */
 }
 #githubLink {
   display: -webkit-box;
