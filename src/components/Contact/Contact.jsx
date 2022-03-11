@@ -90,7 +90,7 @@ function Contact(props) {
               {sending ? (
                 <Ellipsis color={'var(--darkblue)'} size={64} />
               ) : (
-                <p id='btnText'>{msgSent ? 'Message Sent' : 'Send Message'}</p>
+                <p id='btnText'>{msgSent ? 'Success!' : 'Send Message'}</p>
               )}
             </button>
           </form>
