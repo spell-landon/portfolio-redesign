@@ -128,8 +128,7 @@ function Projects(props) {
             initial={{ rotate: '0deg' }}
             whileInView={{ rotate: '360deg' }}
             viewport={{ amount: 1 }}
-            transition={{ duration: 0.5 }}
-            >
+            transition={{ duration: 0.5 }}>
             <AiFillGithub className={styles.icon} />
           </motion.a>
         </div>

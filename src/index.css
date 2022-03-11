@@ -19,6 +19,9 @@
   color: #0f0 !important;
   outline: solid #f00 1px !important; */
 }
+html {
+  overflow-x: hidden;
+}
 
 body {
   margin: 0;
