@@ -10,8 +10,8 @@ function About(props) {
     <Element id='about' name='about'>
       <motion.div className={styles.about} layout>
         <motion.h3
-          initial={{ opacity: 0, x: -25 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -25, visibility: 'hidden' }}
+          animate={{ opacity: 1, x: 0, visibility: 'visible' }}
           transition={{ ease: 'easeInOut', duration: 1, delay: 0.5 }}>
           a bit about me...
         </motion.h3>
@@ -27,8 +27,8 @@ function About(props) {
             transition={{ ease: 'easeIn', duration: 0.3 }}></motion.div>
           <motion.div>
             <motion.section
-              initial={{ opacity: 0, translateX: 100 }}
-              whileInView={{ opacity: 1, translateX: 0 }}
+              initial={{ opacity: 0, translateX: 100, visibility: 'hidden' }}
+              whileInView={{ opacity: 1, translateX: 0, visibility: 'visible' }}
               viewport={{ amount: 0.5 }}
               transition={{ ease: 'easeIn' }}>
               <h4>Education</h4>
@@ -39,8 +39,8 @@ function About(props) {
               </p>
             </motion.section>
             <motion.section
-              initial={{ opacity: 0, translateX: 100 }}
-              whileInView={{ opacity: 1, translateX: 0 }}
+              initial={{ opacity: 0, translateX: 100, visibility: 'hidden' }}
+              whileInView={{ opacity: 1, translateX: 0, visibility: 'visible' }}
               viewport={{ amount: 0.5 }}
               transition={{ ease: 'easeIn' }}>
               <h4>History</h4>
@@ -56,8 +56,8 @@ function About(props) {
               </p>
             </motion.section>
             <motion.section
-              initial={{ opacity: 0, translateX: 100 }}
-              whileInView={{ opacity: 1, translateX: 0 }}
+              initial={{ opacity: 0, translateX: 100, visibility: 'hidden' }}
+              whileInView={{ opacity: 1, translateX: 0, visibility: 'visible' }}
               viewport={{ amount: 0.5 }}
               transition={{ ease: 'easeIn' }}>
               <h4>Motto?</h4>

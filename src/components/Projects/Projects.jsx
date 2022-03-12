@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import styles from './Projects.module.css';
 import petfindr from '../../img/PetFindr.png';
 import watson from '../../img/The Watson.png';
@@ -7,10 +7,20 @@ import flashcards from '../../img/Flash Cards.png';
 import { AiFillGithub } from 'react-icons/ai';
 import { Element } from 'react-scroll';
 // Framer Motion
-import { motion } from 'framer-motion';
+import {
+  motion,
+  useViewportScroll,
+  useTransform,
+  useSpring,
+} from 'framer-motion';
 
 function Projects(props) {
   const scrollRef = useRef(null);
+
+  const { scrollYProgress } = useViewportScroll();
+  const yRange = useTransform(scrollYProgress, [0, 0.9], [0, 1]);
+  const pathLength = useSpring(yRange, { stiffness: 400, damping: 90 });
+
   const item = {
     hidden: { opacity: 0 },
     visible: {
@@ -21,10 +31,10 @@ function Projects(props) {
       },
     },
   };
-
+  console.log(scrollYProgress);
   return (
     <Element id='projects' name='projects'>
-      <div>
+      <motion.div ref={scrollRef}>
         <motion.div
           animate={{ x: -440 }}
           transition={{
@@ -132,7 +142,7 @@ function Projects(props) {
             <AiFillGithub className={styles.icon} />
           </motion.a>
         </div>
-      </div>
+      </motion.div>
     </Element>
   );
 }

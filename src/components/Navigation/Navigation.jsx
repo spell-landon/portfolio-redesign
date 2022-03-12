@@ -29,7 +29,7 @@ function Navigation(props) {
             spy={true}
             smooth={true}
             duration={600}>
-            About
+            About<span>.</span>
           </Link>
         </li>
         <li>
@@ -40,7 +40,7 @@ function Navigation(props) {
             spy={true}
             smooth={true}
             duration={600}>
-            Projects
+            Projects<span>.</span>
           </Link>
         </li>
         <li>
@@ -51,7 +51,7 @@ function Navigation(props) {
             spy={true}
             smooth={true}
             duration={600}>
-            Resume
+            Resume<span>.</span>
           </Link>
         </li>
         <li>
@@ -62,7 +62,7 @@ function Navigation(props) {
             spy={true}
             smooth={true}
             duration={600}>
-            Contact
+            Contact<span>.</span>
           </Link>
         </li>
       </motion.ul>
